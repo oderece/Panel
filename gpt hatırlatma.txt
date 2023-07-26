@@ -1,0 +1,356 @@
+proje_ekle.php , proje_listesi.php urun_ekle.php , urun_listesi.php, musteri_ekle.php, musteri_listesi.php fatura_ekle.php
+index.php: Ana sayfa
+header.php: Ortak başlık dosyası
+footer.php: Ortak altbilgi dosyası
+randevular.php: Randevular Listesi sayfası
+randevu_ekle.php: Randevu Ekleme sayfası
+get_musteri.php: Seçilen müşteriye ait bilgileri getiren AJAX isteği işleyen dosya
+randevu_kaydet.php: Yeni randevuyu veritabanına kaydeden dosya
+randevu_listesi.php: Randevu Listesi sayfası
+randevu_duzenle.php: Randevu Düzenleme sayfası
+randevu_sil.php: Randevuyu veritabanından silen dosya
+gibi birçok dosya kodladık hatırlıyormusun 
+
+proje_ekle.php: Proje Ekleme sayfası
+proje_listesi.php: Proje Listesi sayfası
+urun_ekle.php: Ürün Ekleme sayfası
+urun_listesi.php: Ürün Listesi sayfası
+musteri_ekle.php: Müşteri Ekleme sayfası
+musteri_listesi.php: Müşteri Listesi sayfası
+fatura_ekle.php: Fatura Ekleme sayfası
+grup_ekle.php
+duyuru_ekle.php
+
+
+/mnt/data/proje/proje/search.php
+/mnt/data/proje/proje/tables-data.php
+/mnt/data/proje/proje/urun_listesi.php
+/mnt/data/proje/proje/odeme_listele.php
+/mnt/data/proje/proje/randevu_ekle.php
+/mnt/data/proje/proje/grup_sil.php
+/mnt/data/proje/proje/sil.php
+/mnt/data/proje/proje/proje_sil.php
+/mnt/data/proje/proje/duyuru_ekle.php
+/mnt/data/proje/proje/odeme_ekle.php
+/mnt/data/proje/proje/randevu_sil.php
+/mnt/data/proje/proje/duyuru_listesi.php
+/mnt/data/proje/proje/menu_ekle.php
+/mnt/data/proje/proje/duzenle.php
+/mnt/data/proje/proje/odeme_sil.php
+/mnt/data/proje/proje/il_ilce_mahalle.php
+/mnt/data/proje/proje/grup_guncelle.php
+/mnt/data/proje/proje/duyuru_sil.php
+/mnt/data/proje/proje/get_il.php
+/mnt/data/proje/proje/urun_ekle.php
+/mnt/data/proje/proje/ayarlar.php
+/mnt/data/proje/proje/grup_ekle.php
+/mnt/data/proje/proje/grup_kaydet.php
+/mnt/data/proje/proje/gorev_ekle.php
+/mnt/data/proje/proje/fatura_ekle.php
+/mnt/data/proje/proje/urun_sil.php
+/mnt/data/proje/proje/gider_ekle.php
+/mnt/data/proje/proje/index.php
+/mnt/data/proje/proje/arama_onerileri.php
+/mnt/data/proje/proje/proje_ekle.php
+/mnt/data/proje/proje/header.php
+/mnt/data/proje/proje/gorev_kaydet.php
+/mnt/data/proje/proje/grup_duzenle.php
+/mnt/data/proje/proje/proje_listesi.php
+/mnt/data/proje/proje/giderler_listesi.php
+/mnt/data/proje/proje/get_musteri.php
+/mnt/data/proje/proje/get_mahalle.php
+/mnt/data/proje/proje/randevu_listesi.php
+/mnt/data/proje/proje/randevu_kaydet.php
+/mnt/data/proje/proje/musteri_ekle.php
+/mnt/data/proje/proje/get_ilce.php
+/mnt/data/proje/proje/gorev_listesi.php
+/mnt/data/proje/proje/urun_arama.php
+/mnt/data/proje/proje/register.php
+/mnt/data/proje/proje/grup_listele.php
+/mnt/data/proje/proje/musteri_sil.php
+/mnt/data/proje/proje/footer.php
+/mnt/data/proje/proje/login.php
+/mnt/data/proje/proje/musteri_listesi.php
+/mnt/data/proje/proje/odeme_duzenle.php
+/mnt/data/proje/proje/randevu_duzenle.php
+/mnt/data/proje/proje/proje_duzenle.php
+/mnt/data/proje/proje/profil.php
+/mnt/data/proje/proje/urun_duzenle.php
+/mnt/data/proje/proje/duyuru_duzenle.php
+/mnt/data/proje/proje/musteri_duzenle.php
+/mnt/data/proje/proje/fonksiyonlar.php
+/mnt/data/proje/proje/fatura_listesi.php
+/mnt/data/proje/proje/islemler/ajax.php
+/mnt/data/proje/proje/islemler/baglan.php
+/mnt/data/proje/proje/islemler/cikis.php
+/mnt/data/proje/proje/forms/contact.php
+/mnt/data/proje/proje/forms/hazirform.php
+/mnt/data/proje/proje/fatura/printpdf.php
+/mnt/data/proje/proje/fatura/fatura_guncelle.php
+/mnt/data/proje/proje/menu/menu.php
+
+
+
+"baglan.php" dosyasını "header.php" dosyasına dahil ederek  veritabanı bağlantısını yapıyorsunuz. Bu durumda diğer sayfalarınızda sadece "header.php" dosyasını çağırmamız  gerekiyordu.
+
+İşte bir örnek:
+
+
+
+php
+Copy code
+<!-- Proje Ekle sayfası -->
+<?php
+// Veritabanı bağlantısını sağlamak için header.php dosyasını çağırıyoruz
+require_once 'header.php';
+?>
+
+<!-- Buraya Proje Ekle sayfasının tasarımını ve içeriğini ekleyebilirsiniz -->
+
+<!-- Proje Ekle sayfasının geri kalan kısmı -->
+<?php
+// Sayfanın geri kalan kısmını buraya ekleyebilirsiniz
+?>
+Yukarıdaki örnekte, "Proje Ekle" sayfasının tasarımını ve içeriğini eklemek için uygun yere kod ekleyebilirsiniz. Geri kalan kısmı da isteğe bağlı olarak tamamlayabilirsiniz.
+
+Bu şekilde, diğer sayfalarınızda sadece "header.php" dosyasını çağırarak veritabanı bağlantısını kullanabilirsiniz. Diğer sayfalarınızı aynı mantıkla kodlayabilirsiniz.
+
+
+
+
+
+
+--------------------------------------------------------
+
+<?php 
+
+session_start();
+
+$mysql ="localhost";
+$dbname="kursayarlar";
+$kadi  ="root";
+$pass  ="";
+
+
+try {
+
+	$db = new PDO("mysql:host=$mysql;dbname=$dbname;","$kadi","$pass");
+	$db->query("SET CHARSET UTF8");
+	
+		
+	} catch (PDOException $e) {
+		die("Hata:".$e->getMessage());
+		exit();
+	}	
+	
+
+
+
+
+ ?>
+
+-------------------------------------------
+tüm dosyalarımız bootstrap 4 ile  kodlayacagız 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+muhakkak eklemelisin 
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------
+<?php require_once "header.php" ?>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fatura Ekle</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Fatura Ekle</h1>
+    <hr class="border 2">
+
+    <?php
+    // Veritabanı bağlantısı
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "kursayarlar";
+
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    if ($conn->connect_error) {
+      die("Veritabanı bağlantısı başarısız: " . $conn->connect_error);
+    }
+
+    // Ürünleri veritabanından al
+    $query = "SELECT * FROM urunler";
+    $result = $conn->query($query);
+
+    if ($result->num_rows > 0) {
+       $conn->close();
+      ?>
+
+      <form method="POST" action="fatura_kaydet.php">
+        <div class="container">
+    
+
+        <div class="form-group">
+        <label for="searchInput">Müşteri Seç</label>
+        <input type="text" class="form-control" id="searchInput"  placeholder="Ad veya Soyad girin" >
+        <div id="selectedCustomerContainer"></div>
+    </div> 
+    <div id="suggestions"></div>
+</div>
+     <div id="musteri_onerileri"></div>
+        
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="baslama_tarihi">Fatura Başlama Tarihi</label>
+          <input type="date" class="form-control" id="baslama_tarihi" name="baslama_tarihi">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="bitis_tarihi">Fatura Bitiş Tarihi</label>
+          <input type="date" class="form-control" id="bitis_tarihi" name="bitis_tarihi">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="fatura_no">Fatura No</label>
+        <input type="text" class="form-control" id="fatura_no" name="fatura_no" value="<?php echo rand(100, 9999); ?>" readonly>
+      </div>
+
+      <div class="form-group">
+        <label for="fatura_notu">Fatura Notu</label>
+        <textarea class="form-control" id="fatura_notu" name="fatura_notu" rows="4"></textarea>
+      </div>
+       
+  <table id="fatura-tablosu" class="table"> <?php } else { echo "Ürün bulunamadı.";}  ?>
+    <thead>
+      <tr>
+        <th>Ürün Seç</th>
+        <th>Fiyat</th>
+        <th>Miktar</th>
+        <th>KDV%</th>
+        <th>İndirim%</th>
+        <th>Toplam Tutar</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr id="satir-1">
+      <td>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control arama-kelimesi" placeholder="Arama kelimesi" />
+          <div class="input-group-append">
+            <button class="btn btn-primary" type="button" onclick="searchProducts(1)">Ara</button>
+          </div>
+        </div>
+        <div class="arama-sonuclari"></div>
+      </td>
+      <td>
+        <input type="text" class="form-control fiyat" readonly />
+      </td>
+      <td>
+        <input type="text" class="form-control miktar" value="1" oninput="calculateTotal(1)" />
+      </td>
+      <td>
+        <input type="text" class="form-control kdv" oninput="calculateTotal(1)" />
+      </td>
+      <td>
+        <input type="text" class="form-control indirim" oninput="calculateTotal(1)" />
+      </td>
+      <td>
+        <input type="text" class="form-control toplam" readonly />
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<button type="button" class="btn btn-primary" onclick="addRow()">Satır Ekle</button>
+<button type="submit" class="btn btn-primary">Fatura Kaydet</button>
+
+
+<div class="summary float-md-end">
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-6">
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="toplam-vergi">Toplam Vergi:</label>
+          <input type="text" id="toplam-vergi" readonly class="form-control">
+        </div>
+      </div>
+      
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="toplam-indirim">Toplam İndirim:</label>
+          <input type="text" id="toplam-indirim" readonly class="form-control">
+        </div>
+      </div>
+      
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="genel-toplam">Genel Toplam:</label>
+          <input type="text" id="genel-toplam" readonly class="form-control">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</form>
+      
+
+    <script>
+        function updatePrice() {
+  var selectedPrice = document.getElementById("urun_sec").value;
+  document.getElementById("fiyat").value = selectedPrice;
+  calculateTotal();
+  updateQuantity();
+}
+
+function updateQuantity() {
+  document.getElementById("miktar").value = 1;
+  calculateTotal();
+}
+
+function calculateTotal() {
+  var price = parseFloat(document.getElementById("fiyat").value);
+  var quantity = parseFloat(document.getElementById("miktar").value = 1);
+  var kdvRate = parseFloat(document.getElementById("kdv").value);
+  var discountRate = parseFloat(document.getElementById("indirim").value) / 100;
+
+  if (isNaN(price)) price = 0;
+  if (isNaN(quantity)) quantity = 0;
+  if (isNaN(kdvRate)) kdvRate = 0;
+  if (isNaN(discountRate)) discountRate = 0;
+
+  var kdvAmount = (price * quantity * kdvRate) / 100;
+  var total = (price * quantity) + kdvAmount - ((price * quantity) * discountRate);
+
+  document.getElementById("toplam").value = total.toFixed(2);
+}
+
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="js/kelimearama.js"></script>
+<script type="text/javascript" src="js/aramakutusu.js"></script>
+<script type="text/javascript" src="js/faturaekle.js"></script>
+<script type="text/javascript" src="js/Toplamhesapla.js"></script>
+
+  
+  
+</body>
+
+</html>
+
+<?php require_once 'footer.php'; ?>
+
